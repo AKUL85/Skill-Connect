@@ -2,59 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
-import { 
-  UserGroupIcon, 
-  BookOpenIcon, 
+import {
+  UserGroupIcon,
+  BookOpenIcon,
   ChatBubbleLeftRightIcon,
-  StarIcon,
-  PlayIcon,
-  CheckCircleIcon
+  StarIcon
 } from '@heroicons/react/24/outline';
-
+import techAnimation from '../../public/Tech.json';
 const Home = () => {
-  // Mock Lottie animation data (replace with actual animation)
-  const heroAnimation = {
-    v: "5.5.7",
-    fr: 30,
-    ip: 0,
-    op: 90,
-    w: 500,
-    h: 500,
-    nm: "Education Animation",
-    ddd: 0,
-    assets: [],
-    layers: [{
-      ddd: 0,
-      ind: 1,
-      ty: 4,
-      nm: "Circle",
-      sr: 1,
-      ks: {
-        o: { a: 0, k: 100 },
-        r: { a: 0, k: 0 },
-        p: { a: 0, k: [250, 250, 0] },
-        a: { a: 0, k: [0, 0, 0] },
-        s: { a: 0, k: [100, 100, 100] }
-      },
-      ao: 0,
-      shapes: [{
-        ty: "gr",
-        it: [{
-          d: 1,
-          ty: "el",
-          s: { a: 0, k: [200, 200] },
-          p: { a: 0, k: [0, 0] }
-        }, {
-          ty: "fl",
-          c: { a: 0, k: [0.2, 0.8, 0.8, 1] },
-          o: { a: 0, k: 100 }
-        }]
-      }],
-      ip: 0,
-      op: 90,
-      st: 0
-    }]
-  };
+  // // Lottie animation path (from public folder)
+  // const heroAnimation = `${process.env.PUBLIC_URL}/tech.json`;
 
   return (
     <div className="min-h-screen">
@@ -75,7 +32,7 @@ const Home = () => {
                 Worldwide
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Connect with passionate educators, master new skills, and transform your learning journey 
+                Connect with passionate educators, master new skills, and transform your learning journey
                 with personalized one-on-one sessions and interactive courses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -93,7 +50,7 @@ const Home = () => {
                 </Link>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -101,10 +58,9 @@ const Home = () => {
               className="flex justify-center"
             >
               <div className="w-96 h-96">
-                <Lottie 
-                  animationData={heroAnimation} 
+                <Lottie
+                  animationData={techAnimation}
                   loop={true}
-                  className="w-full h-full"
                 />
               </div>
             </motion.div>
@@ -294,8 +250,8 @@ const Home = () => {
                 </div>
                 <p className="text-gray-700 mb-6">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <img 
-                    src={testimonial.avatar} 
+                  <img
+                    src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-10 h-10 rounded-full object-cover mr-3"
                   />

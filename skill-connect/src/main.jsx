@@ -16,6 +16,8 @@ import Home from './pages/Home';
 import Courses from './pages/Courses';
 import CourseDetails from './pages/CourseDetails';
 import CommunityFeed from './pages/CommunityFeed';
+import StudentDashboard from './pages/StudentDashboard';
+import TeacherDashboard from './pages/TeacherDashboard';
 
 
 
@@ -46,6 +48,12 @@ const router = createBrowserRouter([
       },{
         path:'/community',
         element:<CommunityFeed></CommunityFeed>
+      },{
+        path:'/student/dashboard',
+        element:<StudentDashboard></StudentDashboard>
+      },{
+        path:'/teacher/dashboard',
+        element:<TeacherDashboard></TeacherDashboard>
       }
     ]
   },

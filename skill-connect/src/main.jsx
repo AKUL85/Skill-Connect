@@ -18,6 +18,7 @@ import CourseDetails from './pages/CourseDetails';
 import CommunityFeed from './pages/CommunityFeed';
 import StudentDashboard from './pages/StudentDashboard';
 import TeacherDashboard from './pages/TeacherDashboard';
+import TeacherForm from './pages/TeacherForm';
 
 
 
@@ -54,6 +55,9 @@ const router = createBrowserRouter([
       },{
         path:'/teacher/dashboard',
         element:<TeacherDashboard></TeacherDashboard>
+      },{
+        path:'/teacher/create-course',
+        element:<TeacherForm></TeacherForm>
       }
     ]
   },

@@ -33,7 +33,7 @@ export default function Navbar() {
         { label: "Dashboard", path: "/teacher/dashboard" },
         { label: "Create Course", path: "/teacher/create-course" },
         { label: "Schedule Availability", path: "/teacher/schedule" },
-        { label: "Earnings", path: "/teacher/earnings" },
+       
       ],
     },
     {
